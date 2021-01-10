@@ -11,6 +11,7 @@ import Combine
 enum CatsAPI {
     static let limit = 15
     
+    
     static func getBreeds(page: Int) -> AnyPublisher<[Breed], Error> {
         let url = URL(string: "https://catfact.ninja/breeds?limit=\(Self.limit)&page=\(page)")!
         return URLSession.shared
