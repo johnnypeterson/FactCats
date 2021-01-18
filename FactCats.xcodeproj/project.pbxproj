@@ -470,14 +470,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FactCats/Preview Content\"";
-				DEVELOPMENT_TEAM = F69498T64R;
+				DEVELOPMENT_TEAM = C536ENH863;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FactCats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NewRelic.FactCats;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Test.FactCats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -491,14 +491,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FactCats/Preview Content\"";
-				DEVELOPMENT_TEAM = F69498T64R;
+				DEVELOPMENT_TEAM = C536ENH863;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FactCats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NewRelic.FactCats;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Test.FactCats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
