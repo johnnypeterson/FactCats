@@ -7,17 +7,15 @@
 
 import SwiftUI
 import Combine
-import Realm
-import RealmSwift
+
 
 class BreedViewModel: ObservableObject {
     @Published private(set) var state = State()
     private var subscriptions = Set<AnyCancellable>()
-    let realm = try! Realm()
-    var start = DispatchTime.now()
+    
     
     func fetchNextPageIfPossible() {
-         start = DispatchTime.now()
+         
         
         guard state.canLoadNextPage else {return}
         
@@ -28,20 +26,6 @@ class BreedViewModel: ObservableObject {
     private func onReceive(_ completion: Subscribers.Completion<Error>) {
         switch completion {
         case .finished:
-            let end = DispatchTime.now()
-            let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
-            let timeInterval = Double(nanoTime)
-            print("This will be used to calculate average response time:  \(timeInterval)") //Time in nanoseconds
-            
-            //This is not working as expected at the moment.
-            try! realm.write {
-                let apiCall = APICall()
-                
-                apiCall.id = UUID().uuidString
-                apiCall.call = "breed"
-                apiCall.timeInterval = timeInterval
-                realm.add(apiCall)
-            }
             break
         case .failure:
             state.canLoadNextPage = false

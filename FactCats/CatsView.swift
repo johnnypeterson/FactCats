@@ -15,11 +15,6 @@ struct CatsView: View {
         NavigationView {
             BreedList(breeds: viewModel.state.breeds, isLoading: viewModel.state.canLoadNextPage, onScrolledAtBottom: viewModel.fetchNextPageIfPossible)
                 .navigationBarTitle(Text("Fact Cats"), displayMode: .inline)
-                .navigationBarItems(trailing: NavigationLink(
-                                        destination: MetricsView(),
-                                        label: {
-                                            Text("Metrics")
-                                        }))
                 .onAppear(perform: viewModel.fetchNextPageIfPossible)
         }
     }
@@ -68,6 +63,7 @@ struct CatsRow: View {
     var body: some View {
         HStack {
             Text(breed.breed).font(.title)
+            Spacer()
             Text(verbatim: catEmojies.randomElement() ?? "😺")
             
         }
